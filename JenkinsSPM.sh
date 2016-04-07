@@ -1,5 +1,12 @@
 #!/bin/bash -ex
-eval "$(/usr/local/bin/swiftenv init -)"
+
+if [ -e "/usr/local/bin/swiftenv" ]; then
+	eval "$(/usr/local/bin/swiftenv init -)"
+else
+	eval "$(swiftenv init -)"
+fi
+
+
 swift build -k dist
 swift build --fetch
 if ls Packages/*/Tests 1>/dev/null 2>&1; then
