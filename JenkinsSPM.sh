@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-echo "Build script running as user $(whoami)"
+echo "Build script running as user $(whoami) in directory $(pwd)"
 
 if [ -e "/usr/local/bin/swiftenv" ]; then
 	export PATH="/usr/local/bin:$PATH"
