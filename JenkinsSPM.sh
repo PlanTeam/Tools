@@ -6,12 +6,12 @@
 
 echo "Build script running as user $(whoami) in directory $(pwd)"
 
-if [ -e "~/.bashrc" ]; then
-	~/.bashrc
+if [ -e "$HOME/.bashrc" ]; then
+	$HOME/.bashrc
 fi
 
-if [ -e "~/.bash_profile" ]; then
-	~/.bash_profile
+if [ -e "$HOME/.bash_profile" ]; then
+	$HOME/.bash_profile
 fi
 
 if [ -e "/usr/local/bin/swiftenv" ]; then
