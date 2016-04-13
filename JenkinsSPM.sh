@@ -6,6 +6,7 @@ else
 	eval "$(swiftenv init -)"
 fi
 
+swiftenv version
 
 swift build -k dist
 swift build --fetch
