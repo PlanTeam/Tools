@@ -6,11 +6,11 @@
 
 echo "Build script running as user $(whoami) in directory $(pwd)"
 
-if [ -e "~/.bashrc"]; then
+if [ -e "~/.bashrc" ]; then
 	~/.bashrc
 fi
 
-if [ -e "~/.bash_profile"]; then
+if [ -e "~/.bash_profile" ]; then
 	~/.bash_profile
 fi
 
