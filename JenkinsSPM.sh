@@ -3,10 +3,10 @@
 echo "Build script running as user $(whoami)"
 
 if [ -e "/usr/local/bin/swiftenv" ]; then
-	eval "$(/usr/local/bin/swiftenv init -)"
-else
-	eval "$(swiftenv init -)"
+	export PATH="/usr/local/bin:$PATH"
 fi
+
+eval "$(swiftenv init -)"
 
 swiftenv version
 
