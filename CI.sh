@@ -2,7 +2,7 @@
 
 # Use like this:
 # #!/bin/bash -ex
-# bash <(curl -s https://raw.githubusercontent.com/PlanTeam/Tools/master/JenkinsSPM.sh)
+# bash <(curl -s https://raw.githubusercontent.com/PlanTeam/Tools/master/CI.sh)
 
 echo "Build script running as user $(whoami) in directory $(pwd)"
 
