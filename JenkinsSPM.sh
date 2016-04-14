@@ -14,7 +14,7 @@ eval "$(swiftenv init -)"
 
 swiftenv version
 
-swift build -k dist
+swift build --clean dist
 swift build --fetch
 if ls Packages/*/Tests 1>/dev/null 2>&1; then
 	echo "Deleting subpackage tests"
