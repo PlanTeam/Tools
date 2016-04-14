@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-# Run this script by adding a jenkins build script with the following contents:
+# Use like this:
 # #!/bin/bash -ex
 # bash <(curl -s https://raw.githubusercontent.com/PlanTeam/Tools/master/JenkinsSPM.sh)
 
