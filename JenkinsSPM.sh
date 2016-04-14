@@ -10,6 +10,12 @@ if [ -e "/usr/local/bin/swiftenv" ]; then
 	export PATH="/usr/local/bin:$PATH"
 fi
 
+if [ -e "Tools/testprep.sh" ]; then
+	cd Tools
+	./testprep.sh
+	cd ..
+fi
+
 eval "$(swiftenv init -)"
 
 swiftenv version
