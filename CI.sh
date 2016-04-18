@@ -28,4 +28,6 @@ if [ -e "Tools/testprep.sh" ]; then
 	cd ..
 fi
 
-swift test
+if [ -d "Tests" ]; then
+	swift test
+fi
