@@ -16,11 +16,19 @@ swiftenv version
 
 swift build --clean dist
 swift build --fetch
-if ls Packages/*/Tests 1>/dev/null 2>&1; then
-	echo "Deleting subpackage tests"
-	rm -r Packages/*/Tests
+
+if [ -d Packages ]; then
+	if ls Packages/*/Tests 1>/dev/null 2>&1; then
+		echo "Deleting subpackage tests"
+		rm -r Packages/*/Tests
+	fi
 fi
+
 swift build
+
+if [[ $? != 0 ]]; then
+	exit $?
+fi
 
 if [ -e "Tools/testprep.sh" ]; then
 	cd Tools
