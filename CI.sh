@@ -25,9 +25,12 @@ if [ -d Packages ]; then
 fi
 
 swift build
+sbexit=$?
 
-if [[ $? != 0 ]]; then
-	exit $?
+echo "Swift build exited with code $sbexit"
+
+if [[ $sbexit != 0 ]]; then
+	exit $sbexit
 fi
 
 if [ -e "Tools/testprep.sh" ]; then
