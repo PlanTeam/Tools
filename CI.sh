@@ -15,7 +15,7 @@ eval "$(swiftenv init -)"
 swiftenv version
 
 swift build --clean dist
-swift build --fetch
+swift-package fetch
 
 if [ -d Packages ]; then
 	if ls Packages/*/Tests 1>/dev/null 2>&1; then
